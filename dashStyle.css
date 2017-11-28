@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: black;
+}
+.header {
+    color: white;
+    text-align: center;
+    padding: 32px;
+}
+
+.vid-container{
+    position:relative;
+    overflow:hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.bgvid {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#analyticsLink {
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align:center;
+    margin: 0 auto;
+    width: 100px;
+    display: block;
+
+}
+
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column.leftImgs img {
+    margin-top: 12px;
+    transition: 1s;
+}
+
+/* create an transformation and effect on hover -  makes photos scale twice as big with shadow */
+.column.leftImgs img:hover {
+    transform-origin: left;
+    transform: scale(2);
+    box-shadow: 5px 5px 20px #fff;
+}
+
+.column.rightImgs img {
+    margin-top: 12px;
+    transition: 1s;
+}
+
+/* create an transformation and effect on hover -  makes photos scale twice as big with shadow */
+.column.rightImgs img:hover {
+    transform-origin: right;
+    transform: scale(2);
+    box-shadow: -5px 5px 20px #fff;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+footer {
+    height: 200px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
