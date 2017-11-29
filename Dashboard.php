@@ -1,8 +1,7 @@
 <?php
 session_start();
-
 ?>
-<doc type=html>
+<!doc type=html>
 
     <html>
     <head>
@@ -15,16 +14,16 @@ session_start();
     <div class="vid-container">
         <video id="video1" class="bgvid" autoplay="false" muted="muted" preload="auto" loop src="video/stars.mp4" type="video/mp4">
         </video>
-    <!-- Header -->
+        <!-- Header -->
         <div class="header">
             <h1>Photos from around the world and beyond</h1>
             <p>The following are photos of things found in our universe, please browse them all.</p>
         </div>
 
         <!-- Analytics Link -->
-        <?php if($_SESSION["user"] == "ADMINISTRATOR") { ?>
+<!--        --><?php //if($_SESSION["user"]["username"] == "ADMINISTRATOR") { ?>
             <a id="analyticsLink" href="analytics.php">Analytics</a>
-        <?php } ?>
+<!--        --><?php //} ?>
 
 
         <!-- Photo Grid -->
@@ -70,8 +69,7 @@ session_start();
         function showDetails(thing) {
             // Get the thing displayed in the image (Ex: a turtle, frog, gorilla, etc).
             var dataThing = thing.getAttribute("data-thing");
-            alert(dataThing);
-
+            //alert(dataThing);
             $.ajax({
                 url: 'thingData.php',
                 type: 'POST',
@@ -89,5 +87,5 @@ session_start();
             });
         }
     </script>
-</body>
-</html>
+    </body>
+    </html>

@@ -25,7 +25,7 @@ if (isset($form["errormsg"])) {
 <body>
 		
 <div class="msg"><?php echo $errormsg;?></div>
-<form class="loginform" id="loginform" action="LoginServer.php" method="POST" >
+<form class="loginform" id="loginform" action="loginserver.php" method="POST" >
     <div class="vid-container">
         <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop src="video/Beach.mp4" type="video/mp4">
         </video>

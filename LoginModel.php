@@ -28,7 +28,7 @@ class LoginModel extends AbstractModel implements IModel {
             $bValid = false;
         }
         if (!$bValid) {
-            $this->SetFormData(NAVIGATE, "dashboard.php");
+            $this->SetFormData(NAVIGATE, "Dashboard.php");
             $this->SetFormData(NAVIGATE, "login.php");
 
         }
@@ -49,19 +49,22 @@ class LoginModel extends AbstractModel implements IModel {
         // ---- Check if user is logged in ---- //
         if (isset($user)){
             $this->SetFormData(MEMBERUSER, $user);
-            $this->SetFormData(NAVIGATE, "dashboard.php");
+            $this->SetFormData(NAVIGATE, "Dashboard.php");
         } else {
             $this->SetFormData(NAVIGATE, "login.php");
         }
 
+
+
     }
+
 
     public function GetUser ($formusername, $formpassword){
         return $this->GetUserLoginFromDBRefactor($this->getDBHost(), $this->getDBUserName(), $this->getDBPassword(),
                                           $this->getDBName(), $formusername, $formpassword);
     }
 
-    
+
     // function to return the json object and validate that the user is
 // in the database or not.
 // if no user is found then will return nothing.

@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +16,7 @@ session_start();
     <ul>
         <li>Turtle: <?php
             $counts = array_count_values($_SESSION["thingData"]);
-            if ( $counts['turtle'] != null) {
+            if(in_array("turtle", $_SESSION["thingData"])){
                 echo $counts['turtle'];
             }
             ?>
