@@ -17,7 +17,7 @@ session_start();
         <!-- Header -->
         <div class="header">
             <h1>Photos from around the world and beyond</h1>
-            <p>The following are photos of things found in our universe, please browse them all.</p>
+            <p>Please click on the photos you like, this helps us know which content you like.</p>
         </div>
 
         <!-- Analytics Link -->
